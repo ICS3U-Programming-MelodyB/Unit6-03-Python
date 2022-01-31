@@ -16,9 +16,9 @@ def find_min_value(random_nums):
     min = random_nums[0]
 
     # calculate the min value
-    for counter in range(len(random_nums)):
-        if min > random_nums[counter]:
-            min = random_nums[counter]
+    for counter in random_nums:
+        if min > counter:
+            min = counter
 
     return min
 
@@ -36,7 +36,7 @@ def main():
     print("")
 
     # displays random numbers and calculates average
-    for counter in range(constants.MAX_ARRAY_SIZE):
+    for counter in range (constants.MAX_ARRAY_SIZE):
         random_nums_user.append(random.randint(constants.MIN_NUM,
                                                constants.MAX_NUM))
         print("{} added to the list at "
@@ -44,7 +44,7 @@ def main():
 
     min_user = find_min_value(random_nums_user)
     print("")
-    print("The max value is: {}" .format(min_user))
+    print("The min value is: {}" .format(min_user))
 
 
 if __name__ == "__main__":
